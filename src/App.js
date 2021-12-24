@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
+import "react-html5-camera-photo/build/css/index.css";
 
 function App() {
+  function handleTakePhoto(dataUri) {
+    // Do stuff with the photo...
+    console.log("takePhoto", dataUri);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Camera
+      idealFacingMode={FACING_MODES.ENVIRONMENT}
+      imageType={IMAGE_TYPES.JPG}
+      imageCompression={0.97}
+      isMaxResolution={true}
+      onTakePhoto={(dataUri) => {
+        handleTakePhoto(dataUri);
+      }}
+    />
   );
 }
 
