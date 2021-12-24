@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 
 function App() {
+  const [image, setImage] = useState(undefined);
+
   function handleTakePhoto(dataUri) {
     // Do stuff with the photo...
-    console.log("takePhoto", dataUri);
+    // console.log("takePhoto", dataUri);
+    setImage(dataUri);
   }
 
-  return (
+  return image === undefined ? (
     <Camera
       idealFacingMode={FACING_MODES.ENVIRONMENT}
       imageType={IMAGE_TYPES.JPG}
@@ -18,6 +21,13 @@ function App() {
         handleTakePhoto(dataUri);
       }}
     />
+  ) : (
+    <>
+      <button title="reset" onClick={() => setImage(undefined)}>
+        Reset!
+      </button>
+      <img alt="captured" src={image} width={400} />
+    </>
   );
 }
 
