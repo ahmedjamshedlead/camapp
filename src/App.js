@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 import ImagePreview from "./ImagePreview";
-
+import { val } from "./token";
 function App() {
-  const [dataUri, setDataUri] = useState("");
+  const [dataUri, setDataUri] = useState(val);
 
   function handleTakePhotoAnimationDone(dataUri) {
     console.log("takePhoto");
