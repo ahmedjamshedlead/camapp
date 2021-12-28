@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
-import "react-html5-camera-photo/build/css/index.css";
+// import "react-html5-camera-photo/build/css/index.css";
+import "./Img.css";
 import ImagePreview from "./ImagePreview";
-import { val } from "./token";
 function App() {
-  const [dataUri, setDataUri] = useState(val);
+  const [dataUri, setDataUri] = useState("");
 
   function handleTakePhotoAnimationDone(dataUri) {
-    console.log("takePhoto");
     setDataUri(dataUri);
   }
   return (
@@ -19,7 +18,8 @@ function App() {
           onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
           idealFacingMode={FACING_MODES.ENVIRONMENT}
           imageType={IMAGE_TYPES.JPG}
-          imageCompression={0.97}
+          imageCompression={0.85}
+          isImageMirror={false}
           isMaxResolution={true}
         />
       )}
