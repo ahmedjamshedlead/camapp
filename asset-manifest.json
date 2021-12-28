@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/camapp/static/css/main.b1deef1e.css",
-    "main.js": "/camapp/static/js/main.e66eb972.js",
+    "main.css": "/camapp/static/css/main.c0dc64c0.css",
+    "main.js": "/camapp/static/js/main.610c9e5f.js",
     "static/js/787.28a7dfc7.chunk.js": "/camapp/static/js/787.28a7dfc7.chunk.js",
     "index.html": "/camapp/index.html",
-    "main.b1deef1e.css.map": "/camapp/static/css/main.b1deef1e.css.map",
-    "main.e66eb972.js.map": "/camapp/static/js/main.e66eb972.js.map",
+    "main.c0dc64c0.css.map": "/camapp/static/css/main.c0dc64c0.css.map",
+    "main.610c9e5f.js.map": "/camapp/static/js/main.610c9e5f.js.map",
     "787.28a7dfc7.chunk.js.map": "/camapp/static/js/787.28a7dfc7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1deef1e.css",
-    "static/js/main.e66eb972.js"
+    "static/css/main.c0dc64c0.css",
+    "static/js/main.610c9e5f.js"
   ]
 }
